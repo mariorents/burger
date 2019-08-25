@@ -9,6 +9,13 @@ router.get("/", (req,res)=> {
     });
 });
 
-module.exports = router; 
+router.put("/api/update", (req,res)=> {
+    burger.update(req.body., function(result){
+        console.log(result);
+        res.redirect("/");
+    })
+})
 
+module.exports = router; 
+    
 

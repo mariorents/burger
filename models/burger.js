@@ -6,6 +6,10 @@ const burger = {
             all(res);
         });
     },
+
+    update: function(id, data){
+        orm.update("burgers", id, data);
+    }
 };
 
 module.exports = burger; 
