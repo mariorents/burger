@@ -9,8 +9,8 @@ router.get("/", (req,res)=> {
     });
 });
 
-router.put("/api/update", (req,res)=> {
-    burger.update(req.body., function(result){
+router.put("/burgers/update", (req,res)=> {
+    burger.update(req.body.burger_id, function(result){
         console.log(result);
         res.redirect("/");
     })
